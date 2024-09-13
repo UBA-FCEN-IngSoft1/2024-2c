@@ -1,0 +1,7 @@
+Enunciado Extra:
+
+Se pide extender el modelo de Stack para que además de representar al stack ilimitado ya construido, se puedan construir instancias de un stack limitado. Es decir, uno de que tenga una cantidad limitada de celdas y que no se puedan pushear más elementos que los disponibles en su capacidad.
+
+Se pide además analizar cuál de los modelos anteriores cree que es más sencillo extender para representarla y hacerlo. Recordar que debemos continuar sin utilizar ifs explicitos. 
+
+Además se deberán agregar los casos de tests que hagan falta para probar el nuevo tipo de stack.
