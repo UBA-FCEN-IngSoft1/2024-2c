@@ -1,0 +1,15 @@
+Nuestros queridos vendedores no dejan de darnos trabajo :-)
+Se vendió el sistema para que pueda administrar Proveedores también (Supplier).
+El supplier debe conocer un nombre, tipo y nro de identificación (como un Customer), tener direcciones (también como un Customer) y además conoce Customers a los cuales provee.
+Se debe poder importar información de Suppliers desde un archivo CSV como del ejemplo a continuación:
+ 
+S,Supplier1,D,123					<--- Registro de Supplier
+NC,Pepe,Sanchez,D,22333444			<--- Registro de New Customer. Se debe agregar al sistema de Customer
+EC,D,5456774						<--- Registro de Existing Customer. Se debe buscar en el sistema de Customer
+A,San Martin,3322,Olivos,1636,BsAs		<--- Registro de Address. Pertenece al Supplier
+A,Maipu,888,Florida,1122,Buenos Aires	<--- Registro de Address. Pertenece al Supplier
+
+Desarrollar la nueva funcionalidad usando TDD.
+Sacar todo el código repetido que considere necesario.
+Usar refactorings automatizados en la mayor cantidad de casos posibles
+

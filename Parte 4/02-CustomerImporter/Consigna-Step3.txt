@@ -1,0 +1,10 @@
+Como podemos ver, los tests tardan mucho en correr, por lo que debemos desacoplarnos de la base de datos.
+Para ello implementar dos CustomerSystem. Uno persistente, que usará la base de datos, y uno transient, que usará solo memoria para guardar la información.
+Hacer que la selección de qué sistema usar dependa del ambiente donde corren los test. En el ambiente de Development se debe usar la implementación transient, en el ambiente de Integration se debe usar la implementación persistente
+
+Nuevos refactorings a utilizar:
+- Move Instance Variable
+- Move Method
+- Extract Class
+- Push up variable
+- Push up method

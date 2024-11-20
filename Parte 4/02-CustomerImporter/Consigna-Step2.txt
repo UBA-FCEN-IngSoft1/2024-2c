@@ -1,0 +1,18 @@
+IMPORTANTE:
+El objetivo de este ejercicio es aprender a hacer cambios de diseño encadenando refactorings automatizados, por lo tanto se debe hacer la mayor cantidad de cambios usándolos.
+No vamos a poder verificar que usaron los refactorings cuando podían, traten de ser "sinceros" con ustedes respecto de este requerimiento, además le va a venir muy bien para el parcial conocer bien los refactorings.
+
+Pre-requisitos:
+- Trabajar sobre la solución de la iteración 1, tanto la propia como la propuesta por la cátedra
+
+Requerimientos:
+- Hay tiempo para sacar la deuda técnica del importador de clientes. Mejorar el diseño de dicho método para que sea más declarativo y por lo tanto reusable
+- El sistema esta corriendo pero se encontraron varios errores:
+  - hay veces que hay algo en el archivo pero no importa nada y no da error
+  - hay veces que se genera un "nil doesNotUnderstand: ..."
+  - hay veces que hay accesos fuera de rango de un array
+  - hay veces donde no se copian correctamente los campos del CSV (es como que se desplazan)
+- Para arreglar los errores, primero reproducirlo en un tests y luego solucionarlo
+
+Refactorings a Utilizar:
+- Los mismos vistos hasta ahora

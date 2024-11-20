@@ -1,0 +1,40 @@
+IMPORTANTE:
+El objetivo de este ejercicio es aprender a hacer cambios de diseño encadenando refactorings automatizados, por lo tanto se debe hacer la mayor cantidad de cambios usándolos.
+No vamos a poder verificar que usaron los refactorings cuando podían, traten de ser "sinceros" con ustedes respecto de este requerimiento, además le va a venir muy bien para el parcial conocer bien los refactorings.
+
+Pre-requisitos:
+- Hacer filein de CustomerImporter.st
+- Copiar el archivo 'input.txt' al directorio donde está la imagen
+- Ver que el test corre
+
+Requerimientos:
+- Testear que realmente esté funcionando bien la importación de clientes, o sea que hayan dos clientes en la base y que el primero tenga sus dos direcciones y el segundo su dirección (hay 2 errores a descubrir y arreglar)
+- Desacoplar la importación del archivo 'input.txt' para que se pueda importar desde cualquier tipo de stream, en particular desde un stream de un string.
+- La importación no debe quedar en el test, debe quedar en un method object
+- El test debe quedar bien declarativo y fácil de entender
+- No se debe mejorar el método de importación, eso se hace en la iteración 2
+
+Recordar:
+- setUp se evalúa antes de correr cada test
+- tearDown se evalúa después de correr cada test
+
+Base de datos:
+- Se está simulando una base de datos con la clase DataBaseSession
+- Deben usar los mensajes select: aCondition ofType: aType y selectAllOfType: aType para buscar objetos en la base.
+  Por ejemplo:
+  session 
+     select: [ :aCustomer | aCustomer identificationType = 'D' and: [ aCustomer identificationNumber = '22333444' ]]
+     ofType: Customer.
+  Devuelve todos los clientes que cumplan con esa condición.
+- persist: se debe utilizar para grabar en la base de datos
+- beginTransaction se utiliza para iniciar una transacción (no hay transacciones reales, es solo una simulación)
+- commit se utilizar para terminar una transacción
+
+Refactorings a Utilizar:
+- Temporary to Instance variable
+- Extract method
+- Extract as parameter
+- Add Parameter (posiblemente)
+- Extract to method object
+- Inline temporary 
+- Inline Method
